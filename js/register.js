@@ -12,7 +12,8 @@
 
 	};
 	//获取全部输入框以及提交按钮
-	var inputs = allinputs,completeBtn = Btn;
+	var inputs = allinputs;
+	var completeBtn = Btn;
 	
 	
 
@@ -72,6 +73,18 @@
 
 	//提交按钮点击事件
 	completeBtn.onclick = function(){
-		alert("hello");
+		var count = 0;
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].isCorrect == true) {
+				count++;
+			}
+		}
+
+		if (count == inputs.length) {
+			//之后由ajax传递给后台信息
+			alert("提交成功");
+		}else{
+			alert("提交失败");
+		}
 	}
-}($("#all-input input"),$("#complete-reg")));
+}($("#all-input input"),document.getElementById('complete-reg')));
