@@ -1,4 +1,4 @@
-(function checkInput(){
+(function checkInput(allinputs,Btn){
 	//定义私有变量 储存验证提示信息
 	//键名和元素id 关联
 	var hints = {
@@ -11,13 +11,11 @@
 		mail:{hint:"请填写正确的邮箱地址",correct:"输入正确",error:"输入不正确",reg:/^([\d\w]+[_|\_|\.]?)*[\d\w]+@([\d\w]+[_|\_|\.]?)*[\d\w]+\.[\w]{2,3}/}
 
 	};
+	//获取全部输入框以及提交按钮
+	var inputs = allinputs,completeBtn = Btn;
+	
+	
 
-	//获取所有input 元素
-	var inputWrap = document.getElementById('all-input');
-	var inputs = inputWrap.getElementsByTagName('input');
-
-	//获取提交按钮
-	var completeBtn = document.getElementById('complete-reg');
 
 	//为input元素添加事件
 	for (var i = 0; i < inputs.length; i++) {
@@ -68,24 +66,12 @@
 			
 			
 
-		}
+		};
 
 	}
 
 	//提交按钮点击事件
 	completeBtn.onclick = function(){
-		var count = 0;
-		for (var i = 0; i < inputs.length; i++) {
-			if (inputs[i].isCorrect == true) {
-				count++;
-			}
-		}
-
-		if (count == inputs.length) {
-			alert("提交成功");
-			/*真实要由ajax 发送内容给后台*/
-		}else{
-			alert("提交失败");
-		}
+		alert("hello");
 	}
-}());
+}($("#all-input input"),$("#complete-reg")));
