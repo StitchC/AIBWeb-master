@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv = "X-UA-Compatible" content ="IE=Edge"/> 
+	<title>登录</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normal.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div class="header">
+		<h1>欢迎登陆专业管理系统</h1>
+	</div>
+	<div class="bg">
+		<div class="login-wrap">
+			<div class="form-content">
+				<div class="input-wrap">
+					<span class="input-icon">账号</span>
+					<input type="text" name="username" class="input-content" id="user-name" placeholder="请输入账号">
+					<p id="login-hint">帐号不存在或密码错误</p>
+				</div>
+				<div class="input-wrap">
+					<span class="input-icon">密码</span>
+					<input type="password" name="password" class="input-content" id="pwd" placeholder="请输入密码">
+				</div>
+				<div class="vt-code-wrap">
+					<input type="text" name="vt" id="vt-code">
+					<img src="images/fj2.jpg">
+					<a href="#" id="change-vt-code">换一个</a>
+				</div>
+				<button id="hand-in">登录</button>
+				<label class="remember-me-wrap"><input type="checkbox" id="remember-me">记住密码</label>
+				<div class="link-wrap">
+					<a href="findpassword.html">忘记密码</a>
+					<span>|</span>
+					<a href="register.html">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+body{
+	background: url(../images/reg-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	line-height: 50px;
+	text-align: center;
+}
+/*最外层白色背景*/
+.form-wrap{
+	display: inline-block;
+	width: 700px;
+	height: 450px;
+	vertical-align: middle;
+	margin: 50px auto 0px auto;
+	background-color: #fff;
+}
+/*表单顶部标题*/
+.form-title{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 20px;
+	text-align: center;
+	border-bottom: 3px solid #339933;
+}
+/*包裹所有表单内容层*/
+.form-content{
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+}
+/*包裹所有输入框层*/
+.input-wrap{
+	margin-top: 10px;
+}
+/*表单元素包裹层的全部元素定义以及局部元素定义*/
+.input-wrap span,.input-wrap input,.input-wrap label{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 15px;
+}
+.input-wrap label{
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+}
+.input-wrap input{
+	width: 200px;
+	height: 30px;
+	padding-left: 5px;
+	line-height: 30px;
+	border: 1px solid #999;
+}
+.input-wrap select{
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #999;
+}
+/*提交按钮*/
+#complete-reg{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: text-bottom;
+	margin-left: 75px;
+	background-color: #339933;
+	color: #fff;
+}
+/*跳转链接*/
+.link-login{
+	color: #FF9900;
+}

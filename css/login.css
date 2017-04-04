@@ -1,0 +1,128 @@
+.header{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color: #fff;
+}
+.header h1{
+	margin-left: 50px;
+}
+.bg{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background-image: url(../images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+/*登陆框透明黑色背景样式*/
+.login-wrap{
+	position: absolute;
+	width: 380px;
+	height: 450px;
+	right: 10%;
+	top: 25px;
+	background-color: rgba(0,0,0,0.6);
+	/*兼容ie8*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)
+}
+/*登陆框里面的表单样式*/
+.form-content{
+	width: 280px;
+	margin: 80px auto 0 auto;
+}
+/*各个输入框的的包裹*/
+.input-wrap{
+	width: 100%;
+	line-height: 30px;
+	word-spacing: -6px;
+	margin-bottom: 20px;
+}
+/*输入框前面的标签样式*/
+.input-icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #ccc;
+}
+/*输入框样式*/
+.input-content{
+	display: inline-block;
+	vertical-align: middle;
+	width: 225px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 5px;
+	font-size: 14px;
+}
+/*输入框下方提示样式*/
+#login-hint{
+	word-spacing: 0px;
+	color: red;
+	visibility: hidden;
+}
+
+/*验证码包裹层，验证码输入框，验证码图片，更换验证码按钮样式*/
+.vt-code-wrap{
+	width: 100%;
+	line-height: 30px;
+	word-spacing: -6px;
+	margin-bottom: 30px;
+}
+.vt-code-wrap input{
+	display: inline-block;
+	vertical-align: bottom;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 5px;
+}
+.vt-code-wrap img{
+	display: inline-block;
+	vertical-align: bottom;
+	width: 100px;
+	height: 40px;
+	margin-right: 5px;
+}
+.vt-code-wrap a{
+	color: #fff;
+}
+/*提交按钮样式*/
+#hand-in{
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #0c5da5;
+	cursor: pointer;
+}
+/*记住密码样式*/
+.remember-me-wrap{
+	line-height: 15px;
+	height: 15px;
+	color: #fff;
+	font-size: 14px
+}
+.remember-me-wrap input{
+	display: inline-block;
+	vertical-align: middle;
+}
+/*注册，忘记密码按钮样式*/
+.link-wrap{
+	width: 100%;
+	line-height: 30px;
+	margin-bottom: 30px;
+	text-align: right;
+}
+.link-wrap a,.link-wrap span{
+	color: #fff;
+}
+.link-wrap a:hover{
+	color: #009b95;
+}
