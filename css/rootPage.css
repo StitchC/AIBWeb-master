@@ -1,0 +1,15 @@
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+.side-bar{
+	float: left;
+	width: 200px;
+	height: 100%;
+	background-color: green;
+}
+.content{
+	height: 100%;
+	margin-left: -200px;
+	background-color: red;
+}
