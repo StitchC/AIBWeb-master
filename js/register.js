@@ -1,5 +1,3 @@
-
-
 //定义输入框元素输入提示
 (function checkInput(allinputs,Btn){
 	//定义私有变量 储存验证提示信息
