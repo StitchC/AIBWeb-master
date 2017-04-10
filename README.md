@@ -31,4 +31,4 @@ js/register ------ 注册页js 脚本
 
 新增管理员页 rootPage.html 但未设置任何样式及内容
 
-修改 js/register.js   checkInput 函数和 itemChange 函数
+修改 js/register.js   checkInput 函数和 itemChange 函数 将此两个函数的内部实现方法用jq 来做
