@@ -1,0 +1,32 @@
+body{
+	background: url(../images/reg-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	line-height: 50px;
+	text-align: center;
+}
+/*外层白色背景*/
+.form-wrap{
+	display: inline-block;
+	width: 700px;
+	height: 450px;
+	margin: 50px auto 0px auto;
+	background-color: #fff;
+}
+.form-content{
+	width: 50%;
+	margin: 120px auto 0 auto;
+}
+#department{
+	width: 180px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #999;
+}
+#enter{
+	width: 150px;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	background-color: #006699;
+}
