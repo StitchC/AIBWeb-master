@@ -9,7 +9,6 @@ body{
 .form-wrap{
 	display: inline-block;
 	width: 700px;
-	vertical-align: middle;
 	margin: 50px auto 0px auto;
 	background-color: #fff;
 }
@@ -73,5 +72,5 @@ body{
 }
 /*跳转链接*/
 .link-login{
-	color: #FF9900;
+	color: #006699;
 }
