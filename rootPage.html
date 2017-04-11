@@ -3,15 +3,178 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv = "X-UA-Compatible" content ="IE=Edge"/> 
-	<title>rootPage</title>
+	<title>管理员页</title>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/normal.css">
-	<link rel="stylesheet" type="text/css" href="css/rootPage.css">
 </head>
 <body>
-	<div class="wrapper clearfix">
-		<div class="side-bar"></div>
-		<div class="content"></div>
+	<div class="wrapper">
+		<div class="header">
+			<h3>后台管理页</h3>
+		</div>
+		<div class="mainbody clearfix">
+			<div class="side-bar">
+				<div class="item-wrap-1">
+					<div id="tag-manage">导航栏管理</div>
+					<ul class="child-tag">
+						<li>添加导航栏</li>
+						<li>修改导航栏</li>
+						<li>删除导航栏</li>
+					</ul>
+				</div>
+				<div class="item-wrap-2">
+					<div id="user-manage">用户审核</div>
+					<ul class="child-tag">
+						<li>待审核</li>
+						<li>已审核</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div>
+					<div class="add-tag-wrap">
+						<input type="text" id="add-tag-content">
+						<select id="add-tag-department">
+							<option value="计算机系">计算机系</option>
+							<option value="管理系">管理系</option>
+							<option value="商务系">商务系</option>
+							<option value="财经系">财经系</option>
+							<option value="热作系">热作系</option>
+							<option value="机电系">机电系</option>
+							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
+						</select>
+						<button id="add-tag">添加标签</button>
+					</div>
+				</div>
+				<div>
+					<div class="modify-tag-wrap">
+						<select id="modify-tag-department">
+							<option value="计算机系">计算机系</option>
+							<option value="管理系">管理系</option>
+							<option value="商务系">商务系</option>
+							<option value="财经系">财经系</option>
+							<option value="热作系">热作系</option>
+							<option value="机电系">机电系</option>
+							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
+						</select>
+						<button id="add-tag">修改标签</button>
+					</div>
+				</div>
+				<div>
+					<input type="text" id="delete-tag-content">
+					<select id="delete-tag-department">
+						<option value="计算机系">计算机系</option>
+						<option value="管理系">管理系</option>
+						<option value="商务系">商务系</option>
+						<option value="财经系">财经系</option>
+						<option value="热作系">热作系</option>
+						<option value="机电系">机电系</option>
+						<option value="BTEC国际交流学院">BTEC国际交流学院</option>
+					</select>
+					<button id="add-tag">添加标签</button>
+				</div>
+				<div>
+					<table id="unexamie" class="message-list" cellspacing="0">
+						<caption>待审核列表</caption>
+						<thead>
+							<tr>
+								<th>姓名</th>
+								<th>系别</th>
+								<th>专业</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="pass">通过</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="pass">通过</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="pass">通过</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="pass">通过</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<table id="examied" class="message-list" cellspacing="0">
+						<caption>已审核列表</caption>
+						<thead>
+							<tr>
+								<th>姓名</th>
+								<th>系别</th>
+								<th>专业</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="reload">撤回</button>
+								</td>
+							</tr>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="reload">撤回</button>
+								</td>
+							</tr>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="reload">撤回</button>
+								</td>
+							</tr>
+							<tr>
+								<td>老师1</td>
+								<td>计算机系</td>
+								<td>移动互联应用技术</td>
+								<td>
+									<button class="reload">撤回</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<link rel="stylesheet" type="text/css" href="css/normal.css">
+	<link rel="stylesheet" type="text/css" href="css/rootPage.css">
 </body>
 </html>
