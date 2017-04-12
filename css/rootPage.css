@@ -46,6 +46,39 @@
 	height: 1000px;
 	margin: 0 auto;
 }
+/*增加导航栏模块包裹层*/
+.add-tag-wrap{
+	width: 80%;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+.add-tag-title{
+	margin-bottom: 20px;
+}
+#add-tag-content{
+	width: 180px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 5px;
+	border-bottom: 1px solid #999;
+}
+#add-tag-department{
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #999;
+}
+#add-tag{
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #FF9900;
+	color: #fff;
+}
+.modify-tag-wrap{
+	width: 80%;
+	margin: 30px auto 0 auto;
+}
 .message-list{
 	width: 80%;
 	margin: 80px auto 0 auto;
@@ -66,20 +99,47 @@
 .message-list tr td{
 	border: 1px solid #999;
 }
+.message-list tbody tr:nth-child(2n){
+	background-color: #99CCCC;
+}
+.message-list tbody tr:nth-child(2n+1){
+	background-color: #CCFFFF;
+}
+.modify-tag-list{
+	width: 100%;
+	margin-top: 20px;
+}
 .pass{
 	width: 50px;
+	height: 25px;
 	line-height: 25px;
 	background-color: #339933;
 	color: #fff;
 }
 .delete{
 	width: 50px;
+	height: 25px;
 	line-height: 25px;
 	background-color: #FF0033;
 	color: #fff;
 }
 .reload{
 	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #FF6600;
+	color: #fff;
+}
+.modify-tag{
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #FF6600;
+	color: #fff;
+}
+.delete-tag{
+	width: 50px;
+	height: 25px;
 	line-height: 25px;
 	background-color: #FF6600;
 	color: #fff;
