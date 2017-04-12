@@ -32,20 +32,74 @@
 }
 #tag-manage,#user-manage{
 	line-height: 40px;
+	padding-left: 15px;
 	background-color: #fff;
-	text-align: center;
+	border-bottom: 1px solid #999;
 	cursor: default;
+}
+/*标签子栏目样式 以及子栏目下li 的样式*/
+.child-tag{
+	display: none;
 }
 .child-tag li{
 	line-height: 30px;
 	padding-left: 30px;
 	cursor: default;
 }
+/*右侧mainbody 内容*/
 .content{
 	width: 98%;
-	height: 1000px;
 	margin: 0 auto;
 }
+.content-wrap{
+	display: none;
+}
+/*添加导航栏标题*/
+.add-tag-title{
+	width: 180px;
+	line-height: 35px;
+	margin: 80px auto 0 auto;
+}
+/*添加，删除 / 修改导航栏内容包裹层*/
+.add-tag-wrap,.modify-tag-wrap{
+	width: 80%;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+/*添加导航栏input 标签样式*/
+#add-tag-content{
+	width: 180px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 5px;
+	border-bottom: 1px solid #999;
+}
+/*添加导航栏系别选择下拉框样式*/
+#add-tag-department{
+	width: 120px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #999;
+}
+/*添加导航栏按钮*/
+#add-tag{
+	width: 100px;
+	line-height: 35px;
+	background-color: #FF9900;
+	color: #fff;
+	font-weight: bold;
+}
+/*修改导航信息头部样式*/
+.modify-tag-type-select{
+	text-align: left;
+}
+/*修改导航栏列表上面的分类下拉框*/
+#modify-tag-department{
+	line-height: 35px;
+	height: 35px;
+	border-bottom: 1px solid #999;
+}
+/*所有信息列表表格样式*/
 .message-list{
 	width: 80%;
 	margin: 80px auto 0 auto;
@@ -63,9 +117,21 @@
 	border: 1px solid #999;
 	line-height: 30px;
 }
+.message-list tr:nth-child(2n){
+	background-color: #99CCFF;
+}
+.message-list tbody tr:nth-child(2n+1){
+	background-color: #CCFFFF;
+}
 .message-list tr td{
 	border: 1px solid #999;
 }
+/*标签列表的特殊样式*/
+.tags-list{
+	width: 100%;
+	margin: 20px auto 0 auto;
+}
+/*表格中的操作按钮样式 通过，删除，撤回*/
 .pass{
 	width: 50px;
 	line-height: 25px;
@@ -83,4 +149,19 @@
 	line-height: 25px;
 	background-color: #FF6600;
 	color: #fff;
+}
+.modify-tag{
+	width: 50px;
+	line-height: 25px;
+	background-color: #FF9900;
+	color: #fff;
+}
+.delete-tag{
+	width: 50px;
+	line-height: 25px;
+	background-color: #FF6666;
+	color: #fff;
+}
+.item-onfocus{
+	background-color: #99CCFF;
 }

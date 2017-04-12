@@ -16,21 +16,21 @@
 				<div class="item-wrap-1">
 					<div id="tag-manage">导航栏管理</div>
 					<ul class="child-tag">
-						<li>添加导航栏</li>
-						<li>修改导航栏</li>
-						<li>删除导航栏</li>
+						<li class="child-list-content">添加导航栏</li>
+						<li class="child-list-content">修改/删除 导航栏</li>
 					</ul>
 				</div>
 				<div class="item-wrap-2">
 					<div id="user-manage">用户审核</div>
 					<ul class="child-tag">
-						<li>待审核</li>
-						<li>已审核</li>
+						<li class="child-list-content">待审核</li>
+						<li class="child-list-content">已审核</li>
 					</ul>
 				</div>
 			</div>
 			<div class="content">
-				<div>
+				<div class="content-wrap">
+					<h3 class="add-tag-title">添加导航栏</h3>
 					<div class="add-tag-wrap">
 						<input type="text" id="add-tag-content">
 						<select id="add-tag-department">
@@ -42,37 +42,81 @@
 							<option value="机电系">机电系</option>
 							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
 						</select>
-						<button id="add-tag">添加标签</button>
+						<button id="add-tag">添加导航栏</button>
+						<span id="tag-exist-hint">导航栏名字已存在</span>
 					</div>
 				</div>
-				<div>
+
+				<div class="content-wrap">
 					<div class="modify-tag-wrap">
-						<select id="modify-tag-department">
-							<option value="计算机系">计算机系</option>
-							<option value="管理系">管理系</option>
-							<option value="商务系">商务系</option>
-							<option value="财经系">财经系</option>
-							<option value="热作系">热作系</option>
-							<option value="机电系">机电系</option>
-							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
-						</select>
-						<button id="add-tag">修改标签</button>
+						<div class="modify-tag-type-select">
+							<span>筛选</span>
+							<select id="modify-tag-department">
+								<option value="全部">全部</option>
+								<option value="计算机系">计算机系</option>
+								<option value="管理系">管理系</option>
+								<option value="商务系">商务系</option>
+								<option value="财经系">财经系</option>
+								<option value="热作系">热作系</option>
+								<option value="机电系">机电系</option>
+								<option value="BTEC国际交流学院">BTEC国际交流学院</option>
+							</select>
+						</div>
+						<div class="modify-tag-content-wrap">
+							<table id="all-tag" class="message-list tags-list" cellspacing="0">
+								<caption>已存在的导航栏</caption>
+								<thead>
+									<tr>
+										<th>姓名</th>
+										<th>系别</th>
+										<th>专业</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>老师1</td>
+										<td>计算机系</td>
+										<td>移动互联应用技术</td>
+										<td>
+											<button class="modify-tag">修改</button>
+											<button class="delete-tag">删除</button>
+										</td>
+									</tr>
+									<tr>
+										<td>老师1</td>
+										<td>计算机系</td>
+										<td>移动互联应用技术</td>
+										<td>
+											<button class="modify-tag">修改</button>
+											<button class="delete-tag">删除</button>
+										</td>
+									</tr>
+									<tr>
+										<td>老师1</td>
+										<td>计算机系</td>
+										<td>移动互联应用技术</td>
+										<td>
+											<button class="modify-tag">修改</button>
+											<button class="delete-tag">删除</button>
+										</td>
+									</tr>
+									<tr>
+										<td>老师1</td>
+										<td>计算机系</td>
+										<td>移动互联应用技术</td>
+										<td>
+											<button class="modify-tag">修改</button>
+											<button class="delete-tag">删除</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
-				<div>
-					<input type="text" id="delete-tag-content">
-					<select id="delete-tag-department">
-						<option value="计算机系">计算机系</option>
-						<option value="管理系">管理系</option>
-						<option value="商务系">商务系</option>
-						<option value="财经系">财经系</option>
-						<option value="热作系">热作系</option>
-						<option value="机电系">机电系</option>
-						<option value="BTEC国际交流学院">BTEC国际交流学院</option>
-					</select>
-					<button id="add-tag">添加标签</button>
-				</div>
-				<div>
+
+				<div class="content-wrap">
 					<table id="unexamie" class="message-list" cellspacing="0">
 						<caption>待审核列表</caption>
 						<thead>
@@ -123,7 +167,8 @@
 						</tbody>
 					</table>
 				</div>
-				<div>
+
+				<div class="content-wrap">
 					<table id="examied" class="message-list" cellspacing="0">
 						<caption>已审核列表</caption>
 						<thead>
@@ -173,7 +218,8 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<script type="text/javascript" src="js/rootpage.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/normal.css">
 	<link rel="stylesheet" type="text/css" href="css/rootPage.css">
 </body>
