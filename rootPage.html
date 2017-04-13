@@ -8,10 +8,15 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header">
-			<h3>后台管理页</h3>
+		<div class="header clearfix">
+			<div class="title-wrap">
+				<h3>后台管理页</h3>
+			</div>
+			<div class="logout-btn-wrap">
+				<span id="logout-btn">退出</span>
+			</div>
 		</div>
-		<div class="mainbody clearfix">
+		<div class="mainbody">
 			<div class="side-bar">
 				<div class="item-wrap-1">
 					<div id="tag-manage">导航栏管理</div>
@@ -50,6 +55,7 @@
 				<div class="content-wrap">
 					<div class="modify-tag-wrap">
 						<select id="select-department">
+							<option value="全部">全部</option>
 							<option value="计算机系">计算机系</option>
 							<option value="管理系">管理系</option>
 							<option value="商务系">商务系</option>
@@ -59,7 +65,7 @@
 							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
 						</select>
 						<table id="all-list" class="message-list modify-tag-list" cellspacing="0">
-						<caption>待审核列表</caption>
+						<caption>已存在的导航栏</caption>
 						<thead>
 							<tr>
 								<th>导航名</th>
