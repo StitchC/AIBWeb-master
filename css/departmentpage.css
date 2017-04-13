@@ -1,0 +1,132 @@
+.header{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background-color: #333333;
+}
+.title-wrap{
+	float: left;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.title-wrap h3{
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+	color: #fff;
+}
+.header-tag{
+	float: right;
+	width: 120px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+#add-file a{
+	color: #fff;
+}
+#user-name{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-right: 1px solid #fff;
+	color: #fff;
+	cursor: default;
+}
+#user-name:hover,#add-file a:hover{
+	color: #FF6600;
+}
+#user-operate{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 180px;
+	background-color: #242C37;
+	visibility: hidden;
+}
+#user-operate ul li{
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	text-align: center;
+}
+#user-operate ul li a{
+	color: #fff;
+}
+#user-operate ul li a:hover{
+	color: #FF6600;
+}
+#logout-btn{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	cursor: default;
+}
+#logout-btn:hover{
+	color: #FF6600;
+}
+.side-bar{
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #F0F6F6;
+}
+.tag-title{
+	width: 80%;
+	height: 50px;
+	margin: 20px auto 0 auto;
+	line-height: 50px;
+	padding-left: 15px;
+	border-bottom: 1px solid #CADBE6;
+	color: #000;
+	font-size: 18px;
+}
+#tag-content{
+	margin: 20px auto 0 auto;
+}
+#tag-content li{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	font-weight: bold;
+	color: #666;
+	cursor: default;
+}
+#tag-content li:hover{
+	color: #2277DD;
+	background-color: #D5E2EF;
+}
+.content{
+	padding-top: 50px;
+	padding-left: 210px;
+}
+#content-title{
+	width: 90%;
+	margin: 30px auto 0 auto;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.main-content-wrap{
+	width: 90%;
+	margin: 30px auto 0 auto;
+}
+#main-content li{
+	height: 35px;
+	padding-left: 30px;
+}
+#main-content li a{
+	color: #000;
+}
+#main-content li a:hover{
+	text-decoration: underline;
+}
