@@ -50,3 +50,9 @@ js/login.js -------登陆页js 脚本
 修改：	修改后台管理页面，增加类：content-wrap（用作点击侧边栏跟据对应的index隐藏或出现），add-tag-wrap（增加标签模块包裹层），modify-tag-wrap（修改标签模块包裹曾）
 	合并了侧边栏增加 和 删除标签，增加和删除导航的内容合并到一个表格
 	修改后台管理页面样式
+
+2017-04-13：
+
+增加：departmentpage（系主页）以及样式 departmentpage.css
+
+修改：rootpage（管理员页）样式以及部分结构
