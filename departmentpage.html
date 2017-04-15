@@ -7,20 +7,34 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
+	<div id="release-msg-content">
+		<form action=" " method="post" enctype="multipart/form-data">
+			<div id="close-btn">×</div>
+			<h3>上传文件</h3>
+			<p class="release-msg-wrap">
+				<span>标题</span>
+				<input type="text" id="release-msg-title" name="file-title">
+			</p>
+			<p>
+				<input type="file" name="release-file" id="select-file">
+			</p>
+		</form>
+	</div>
 	<div class="wrapper">
 		<div class="header">
 			<div class="title-wrap">
 				<h3>计算机系主页</h3>
 			</div>
 			<div class="header-tag" id="add-file">
-				<a href="#">发布信息</a>
+				<span id="release-msg">发布信息</a>
 			</div>
 			<div class="header-tag" id="user-name-wrap">
 				<span id="user-name">xx老师</span>
 			</div>
 			<div id="user-operate">
 				<ul>
-					<li><a href="#">个人信息</a></li>
+					<li><a href="personalpage.html">个人信息</a></li>
+					<li><a href="modifypwd.html">修改密码</a></li>
 				</ul>
 				<span id="logout-btn">退出</span>
 			</div>
@@ -42,27 +56,139 @@
 			<div class="content">
 				<h3 id="content-title">对应侧边栏的标题</h3>
 				<div class="main-content-wrap">
-					<ul id="main-content">
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
-						<li><a href="">很长很长很长很长很长很长很长的标题</a></li>
+					<ul id="main-content-list">
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>	
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
+						<li>
+							<a href="#">很长很长很长很长很长很长很长的标题</a>
+							<span id="public-time">2017-04-13</span>
+						</li>
 					</ul>	
 				</div>
 			</div>
