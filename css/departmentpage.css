@@ -1,3 +1,40 @@
+#release-msg-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 20;
+}
+#release-msg-content form{
+	width: 500px;
+	height: 350px;
+	margin: 15% auto 0 auto;
+	background-color: #fff;
+}
+#close-btn{
+	padding-right: 15px;
+	text-align: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+#release-msg-content form h3{
+	text-align: center;
+}
+#release-msg-content form p{
+	width: 300px;
+	margin: 20px auto 0 auto;
+}
+/*文件标题输入框样式*/
+#release-msg-title{
+	width: 175px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 5px;
+	border: 1px solid #ccc;
+}
 .header{
 	position: fixed;
 	width: 100%;
@@ -24,20 +61,21 @@
 	line-height: 50px;
 	text-align: center;
 }
-#add-file a{
+#release-msg{
 	color: #fff;
+	cursor: default;
 }
 #user-name{
 	display: inline-block;
 	vertical-align: middle;
 	width: 100%;
-	height: 30px;
-	line-height: 30px;
+	height: 25px;
+	line-height: 25px;
 	border-right: 1px solid #fff;
 	color: #fff;
 	cursor: default;
 }
-#user-name:hover,#add-file a:hover{
+#user-name:hover,#release-msg:hover{
 	color: #FF6600;
 }
 #user-operate{
@@ -111,22 +149,42 @@
 }
 #content-title{
 	width: 90%;
-	margin: 30px auto 0 auto;
-	height: 30px;
-	line-height: 30px;
+	margin: 20px auto 0 auto;
+	height: 50px;
+	line-height: 50px;
 	border-bottom: 1px solid #ccc;
 }
 .main-content-wrap{
 	width: 90%;
 	margin: 30px auto 0 auto;
 }
-#main-content li{
-	height: 35px;
-	padding-left: 30px;
+#main-content-list{
+	width: 100%;
 }
-#main-content li a{
+#main-content-list li{
+	height: 45px;
+	line-height: 45px;
+	word-spacing: -6px
+}
+#main-content-list li:hover{
+	background-color: #DDFFF5;
+}
+#main-content-list li a{
+	display: inline-block;
+	vertical-align: middle;
+	width: 80%;
 	color: #000;
+	text-align: left;
+	word-spacing: 0px;
 }
-#main-content li a:hover{
+#main-content-list li span{
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+	color: #000;
+	text-align: center;
+	word-spacing: 0px;
+}
+#main-content-list li a:hover{
 	text-decoration: underline;
 }

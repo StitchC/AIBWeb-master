@@ -28,7 +28,7 @@
 				<div class="item-wrap-2">
 					<div id="user-manage">用户审核</div>
 					<ul class="child-tag">
-						<li>待审核</li>
+						<li>待审核<span id="number-hints">15</span></li>
 						<li>已审核</li>
 					</ul>
 				</div>
@@ -47,14 +47,15 @@
 							<option value="机电系">机电系</option>
 							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
 						</select>
-						<button id="add-tag">添加标签</button>
-						<span id="add-tag-hint">已有此标签</span>
+						<button id="add-tag" type="button">添加标签</button>
+						<span id="add-tag-hint" type="button">已有此标签</span>
 					</div>
 				</div>
 
 				<div class="content-wrap">
 					<div class="modify-tag-wrap">
-						<select id="select-department">
+						<span>筛选</span>
+						<select id="modify-tag-filter" class="filter-style">
 							<option value="全部">全部</option>
 							<option value="计算机系">计算机系</option>
 							<option value="管理系">管理系</option>
@@ -64,152 +65,178 @@
 							<option value="机电系">机电系</option>
 							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
 						</select>
-						<table id="all-list" class="message-list modify-tag-list" cellspacing="0">
-						<caption>已存在的导航栏</caption>
-						<thead>
-							<tr>
-								<th>导航名</th>
-								<th>系别</th>
-								<th>操作</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>标签1</td>
-								<td>计算机系</td>
-								<td>
-									<button class="modify-tag">修改</button>
-									<button class="delete-tag">删除</button>
-								</td>
-							</tr>
-							<tr>
-								<td>标签1</td>
-								<td>计算机系</td>
-								<td>
-									<button class="modify-tag">修改</button>
-									<button class="delete-tag">删除</button>
-								</td>
-							</tr>
-							<tr>
-								<td>标签1</td>
-								<td>计算机系</td>
-								<td>
-									<button class="modify-tag">修改</button>
-									<button class="delete-tag">删除</button>
-								</td>
-							</tr>
-							<tr>
-								<td>标签1</td>
-								<td>计算机系</td>
-								<td>
-									<button class="modify-tag">修改</button>
-									<button class="delete-tag">删除</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+						<table id="all-list" class="message-list" cellspacing="0">
+							<caption>已存在的导航栏</caption>
+							<thead>
+								<tr>
+									<th>导航名</th>
+									<th>系别</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>标签1</td>
+									<td>计算机系</td>
+									<td>
+										<button class="modify-tag">修改</button>
+										<button class="delete-tag">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>标签1</td>
+									<td>计算机系</td>
+									<td>
+										<button class="modify-tag">修改</button>
+										<button class="delete-tag">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>标签1</td>
+									<td>计算机系</td>
+									<td>
+										<button class="modify-tag">修改</button>
+										<button class="delete-tag">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>标签1</td>
+									<td>计算机系</td>
+									<td>
+										<button class="modify-tag">修改</button>
+										<button class="delete-tag">删除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 
 
 				<div class="content-wrap">
-					<table id="unexamie" class="message-list" cellspacing="0">
-						<caption>待审核列表</caption>
-						<thead>
-							<tr>
-								<th>姓名</th>
-								<th>系别</th>
-								<th>专业</th>
-								<th>操作</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="pass">通过</button>
-									<button class="delete">删除</button>
-								</td>
-							</tr>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="pass">通过</button>
-									<button class="delete">删除</button>
-								</td>
-							</tr>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="pass">通过</button>
-									<button class="delete">删除</button>
-								</td>
-							</tr>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="pass">通过</button>
-									<button class="delete">删除</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="unexamie-wrap">
+						<span>筛选</span>
+						<select id="unexamie-filter" class="filter-style">
+							<option value="全部">全部</option>
+							<option value="计算机系">计算机系</option>
+							<option value="管理系">管理系</option>
+							<option value="商务系">商务系</option>
+							<option value="财经系">财经系</option>
+							<option value="热作系">热作系</option>
+							<option value="机电系">机电系</option>
+							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
+						</select>
+						<table id="unexamie" class="message-list" cellspacing="0">
+							<caption>待审核列表</caption>
+							<thead>
+								<tr>
+									<th>姓名</th>
+									<th>系别</th>
+									<th>专业</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="pass">通过</button>
+										<button class="delete">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="pass">通过</button>
+										<button class="delete">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="pass">通过</button>
+										<button class="delete">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="pass" type="button">通过</button>
+										<button class="delete" type="button">删除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 
 				<div class="content-wrap">
-					<table id="examied" class="message-list" cellspacing="0">
-						<caption>已审核列表</caption>
-						<thead>
-							<tr>
-								<th>姓名</th>
-								<th>系别</th>
-								<th>专业</th>
-								<th>操作</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="reload">撤回</button>
-								</td>
-							</tr>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="reload">撤回</button>
-								</td>
-							</tr>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="reload">撤回</button>
-								</td>
-							</tr>
-							<tr>
-								<td>老师1</td>
-								<td>计算机系</td>
-								<td>移动互联应用技术</td>
-								<td>
-									<button class="reload">撤回</button>
-								</td>
-							</tr>
-						</tbody>
+					<div class="examie-wrap">
+						<span>筛选</span>
+						<select id="examie-filter" class="filter-style">
+							<option value="全部">全部</option>
+							<option value="计算机系">计算机系</option>
+							<option value="管理系">管理系</option>
+							<option value="商务系">商务系</option>
+							<option value="财经系">财经系</option>
+							<option value="热作系">热作系</option>
+							<option value="机电系">机电系</option>
+							<option value="BTEC国际交流学院">BTEC国际交流学院</option>
+						</select>
+						<table id="examied" class="message-list" cellspacing="0">
+							<caption>已审核列表</caption>
+							<thead>
+								<tr>
+									<th>姓名</th>
+									<th>系别</th>
+									<th>专业</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="reload">撤回</button>
+									</td>
+								</tr>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="reload">撤回</button>
+									</td>
+								</tr>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="reload">撤回</button>
+									</td>
+								</tr>
+								<tr>
+									<td>老师1</td>
+									<td>计算机系</td>
+									<td>移动互联应用技术</td>
+									<td>
+										<button class="reload" type="button">撤回</button>
+									</td>
+								</tr>
+							</tbody>
 					</table>
+					</div>
 				</div>
 			</div>
 		</div>

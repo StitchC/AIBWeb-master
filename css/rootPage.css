@@ -57,18 +57,36 @@
 	left: 0;
 	width: 200px;
 	height: 100%;
-	background-color: #F0F6F6;
+	background-color: #494E52;
 }
 #tag-manage,#user-manage{
 	line-height: 40px;
-	background-color: #fff;
+	background-color: #BEC2C5;
 	text-align: center;
 	cursor: default;
 }
 .child-tag li{
 	line-height: 30px;
 	padding-left: 30px;
+	color: #fff;
 	cursor: default;
+}
+.child-tag li:hover{
+	background-color: #fff;
+	color: #434343;
+}
+#number-hints{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #E40045;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 50%;
 }
 .content{
 	width: 98%;
@@ -104,17 +122,17 @@
 	background-color: #FF9900;
 	color: #fff;
 }
-.modify-tag-wrap{
+.modify-tag-wrap,.unexamie-wrap,.examie-wrap{
 	width: 80%;
 	margin: 30px auto 0 auto;
 }
-#select-department{
+.filter-style{
 	width: 125px;
 	border-bottom: 1px solid #999;
 }
 .message-list{
-	width: 80%;
-	margin: 80px auto 0 auto;
+	width: 100%;
+	margin-top: 20px;
 	text-align: center;
 	border: 1px solid #000;
 }
@@ -138,9 +156,8 @@
 .message-list tbody tr:nth-child(2n+1){
 	background-color: #CCFFFF;
 }
-.modify-tag-list{
-	width: 100%;
-	margin-top: 20px;
+.message-list tbody tr:hover{
+	background-color: #B2FFEE;
 }
 .pass{
 	width: 50px;
@@ -153,27 +170,27 @@
 	width: 50px;
 	height: 25px;
 	line-height: 25px;
-	background-color: #FF0033;
+	background-color: #FF3300;
 	color: #fff;
 }
 .reload{
 	width: 50px;
 	height: 25px;
 	line-height: 25px;
-	background-color: #FF6600;
+	background-color: #FF7081;
 	color: #fff;
 }
 .modify-tag{
 	width: 50px;
 	height: 25px;
 	line-height: 25px;
-	background-color: #FF6600;
+	background-color: #3470A6;
 	color: #fff;
 }
 .delete-tag{
 	width: 50px;
 	height: 25px;
 	line-height: 25px;
-	background-color: #FF6600;
+	background-color: #FF3300;
 	color: #fff;
 }
