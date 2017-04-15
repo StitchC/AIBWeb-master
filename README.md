@@ -11,6 +11,10 @@ register.html ------- 注册页
 
 rootPage.html ------ 管理员页
 
+departmentpage.html ----- 系别主页
+
+personalpage.html ----- 个人信息主页
+
 css/normal.css ------- 统配样式
 
 css/login.css -----登陆页样式
@@ -24,6 +28,8 @@ css/register.css ------- 注册页样式
 css/rootPage.css ------- 管理员页样式
 
 css/selectdepartment.css ------ 系别选择页样式
+
+css/personalpage.css ------- 个人信息页样式
 
 js/register.js ------ 注册页js 脚本
 
@@ -56,3 +62,11 @@ js/login.js -------登陆页js 脚本
 增加：departmentpage（系主页）以及样式 departmentpage.css
 
 修改：rootpage（管理员页）样式以及部分结构
+
+2017-4-15：
+
+增加：个人信息主页(personalpage.html)用来显示用户的基本信息，以及个人信息主页的样式(personalpage.css)
+
+修改：修改了系主页(departmentpage.html)的表格按钮样式以及表格的筛选选项，同时增加了发布信息的弹出层元素
+	
+      修改了管理员页(rootpage.html)的侧边栏样式
