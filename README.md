@@ -15,6 +15,10 @@ departmentpage.html ----- 系别主页
 
 personalpage.html ----- 个人信息主页
 
+
+-----------  css 文件 -------------
+
+
 css/normal.css ------- 统配样式
 
 css/login.css -----登陆页样式
@@ -31,10 +35,27 @@ css/selectdepartment.css ------ 系别选择页样式
 
 css/personalpage.css ------- 个人信息页样式
 
-js/register.js ------ 注册页js 脚本
 
-js/login.js -------登陆页js 脚本
 
+---------  js 文件 ---------
+
+js/require.min.js ------ require.js 模块化管理工具
+
+js/jquery.min.js ------ jq库
+
+js/cookies.js ---- 自定义cookie模块
+
+js/overborwserEvent.js ----- 自定义跨浏览器事件绑定模块
+
+js/checkInput.js -------- 自定义表单验证模块
+
+js/registerMain.js ------ 注册页js 脚本
+
+js/loginMain.js -------  登陆页js 脚本
+
+js/rootpageMain.js  ------ 管理员页js 脚本
+
+js/departmentMain.js ------ 系主页js 脚本
 
 
 2017-04-10：
@@ -70,3 +91,11 @@ js/login.js -------登陆页js 脚本
 修改：修改了系主页(departmentpage.html)的表格按钮样式以及表格的筛选选项，同时增加了发布信息的弹出层元素
 	
       修改了管理员页(rootpage.html)的侧边栏样式
+
+
+2017-4-22（重大变更）：
+
+增加：require.js 模块管理插件，cookies.js 自定义cookies模块，checkInput.js 自定义表单验证模块，overborwserEvent.js 自定义跨浏览器模块；departmentpageMain.js 系主页脚本，rootpageMain.js 管理员页面脚本。
+
+修改：login.js 变成 loginMain.js，register.js 变成 registerMain.js,加入模块管理元素
+
