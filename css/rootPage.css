@@ -48,10 +48,10 @@
 	display: inline-block;
 	width: 120px;
 	height: 40px;
-	line-height: 40px
-	background-color: #000;
+	line-height: 40px;
+	background-color: #3F92D2;
 	text-align: center;
-	color: #000;
+	color: #fff;
 }
 .wrapper{
 	width: 100%;
@@ -149,6 +149,9 @@
 }
 .content-wrap{
 	display: none;
+}
+.content-wrap:nth-child(1){
+	display: block;
 }
 /*增加导航栏模块包裹层*/
 .add-tag-wrap{

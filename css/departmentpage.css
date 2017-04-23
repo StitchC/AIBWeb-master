@@ -1,3 +1,4 @@
+/*上传文件弹出层样式*/
 #release-msg-content{
 	position: absolute;
 	top: 0;
@@ -41,10 +42,12 @@
 	padding-left: 3px;
 	border: 1px solid #ccc;
 }
+/*顶部信息栏样式*/
 .header{
 	position: fixed;
 	width: 100%;
 	height: 50px;
+	z-index: 20;
 	background-color: #333333;
 }
 .title-wrap{
@@ -89,12 +92,14 @@
 #user-name:hover,#release-msg:hover,#manage-msg:hover{
 	color: #FF6600;
 }
+/*用户操作弹出层样式*/
 #user-operate{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 180px;
 	background-color: #242C37;
+	z-index: 999;
 	visibility: hidden;
 }
 #user-operate ul li{
@@ -121,9 +126,40 @@
 #logout-btn:hover{
 	color: #FF6600;
 }
-.side-bar{
+/*顶部一级导航栏样式*/
+.head-nav{
 	position: fixed;
 	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 45px;
+	background-color: #666;
+	z-index: 0;
+}
+.head-nav ul{
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	/*overflow-x: scroll;
+	overflow-y: hidden;*/
+	word-spacing: -6px;
+	white-space: nowrap;
+}
+.head-nav ul li{
+	display: inline-block;
+	height: 100%;
+	line-height: 45px;
+	padding-left: 5px;
+	padding-right: 5px;
+	word-spacing: 0px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+.side-bar{
+	position: fixed;
+	top: 95px;
 	left: 0;
 	width: 200px;
 	height: 100%;
@@ -155,7 +191,7 @@
 	background-color: #D5E2EF;
 }
 .content{
-	padding-top: 50px;
+	padding-top: 95px;
 	padding-left: 210px;
 }
 #content-title{
@@ -169,32 +205,38 @@
 	width: 90%;
 	margin: 30px auto 0 auto;
 }
+.main-content-header{
+	width: 100%;
+	word-spacing: -6px;
+}
 #main-content-list{
 	width: 100%;
+	margin-top: 20px;
 }
-#main-content-list li{
-	height: 45px;
-	line-height: 45px;
-	word-spacing: -6px
-}
-#main-content-list li:hover{
-	background-color: #DDFFF5;
-}
-#main-content-list li a{
+.title{
 	display: inline-block;
 	vertical-align: middle;
-	width: 80%;
+	width: 60%;
 	color: #000;
 	text-align: left;
 	word-spacing: 0px;
 }
-#main-content-list li span{
+.author,.public-time{
 	display: inline-block;
 	vertical-align: middle;
 	width: 20%;
 	color: #000;
 	text-align: center;
 	word-spacing: 0px;
+}
+#main-content-list li{
+	height: 45px;
+	line-height: 45px;
+	word-spacing: -6px;
+	border-bottom: 2px dotted #999;
+}
+#main-content-list li:hover{
+	background-color: #DDFFF5;
 }
 #main-content-list li a:hover{
 	text-decoration: underline;
