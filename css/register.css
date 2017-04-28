@@ -71,10 +71,6 @@ body{
 #change-vt-code{
 	color: #000;
 }
-/*提示框样式*/
-.hint{
-	visibility: hidden;
-}
 /*提交按钮*/
 #complete-reg{
 	display: inline-block;

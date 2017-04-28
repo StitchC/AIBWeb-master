@@ -35,7 +35,7 @@
 .login-wrap{
 	position: absolute;
 	width: 380px;
-	height: 450px;
+	height: 80%;
 	right: 10%;
 	top: 25px;
 	background-color: rgba(0,0,0,0.6);
@@ -50,7 +50,7 @@
 	width: 100%;
 	line-height: 30px;
 	word-spacing: -6px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 /*输入框前面的标签样式*/
 .input-icon{
@@ -76,7 +76,6 @@
 #login-hint{
 	word-spacing: 0px;
 	color: red;
-	visibility: hidden;
 }
 
 /*验证码包裹层，验证码输入框，验证码图片，更换验证码按钮样式*/
@@ -84,7 +83,8 @@
 	width: 100%;
 	line-height: 30px;
 	word-spacing: -6px;
-	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .vt-code-wrap input{
 	display: inline-block;
@@ -105,7 +105,6 @@
 	color: #fff;
 }
 #vt-code-hint{
-	visibility: hidden;
 	color: red;
 }
 /*提交按钮样式*/
