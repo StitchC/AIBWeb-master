@@ -26,7 +26,7 @@
 .bg{
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height: 600px;
 	background-image: url(../images/bg.jpg);
 	background-size: cover;
 	background-position: center;
@@ -39,8 +39,6 @@
 	right: 10%;
 	top: 25px;
 	background-color: rgba(0,0,0,0.6);
-	/*兼容ie8*/
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)
 }
 /*登陆框里面的表单样式*/
 .form-content{
@@ -86,7 +84,7 @@
 	width: 100%;
 	line-height: 30px;
 	word-spacing: -6px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .vt-code-wrap input{
 	display: inline-block;
@@ -106,8 +104,12 @@
 .vt-code-wrap a{
 	color: #fff;
 }
+#vt-code-hint{
+	visibility: hidden;
+	color: red;
+}
 /*提交按钮样式*/
-#hand-in{
+#log-in{
 	display: block;
 	width: 100%;
 	height: 40px;

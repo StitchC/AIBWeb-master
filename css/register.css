@@ -54,6 +54,23 @@ body{
 	line-height: 30px;
 	border: 1px solid #999;
 }
+#vtCode{
+	width: 80px;
+	height: 30px;
+	padding-left: 5px;
+	line-height: 30px;
+	border: 1px solid #999;
+}
+#vt-img{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 30px;
+	margin-right: 5px;
+}
+#change-vt-code{
+	color: #000;
+}
 /*提示框样式*/
 .hint{
 	visibility: hidden;
