@@ -99,3 +99,6 @@ js/departmentMain.js ------ 系主页js 脚本
 
 修改：login.js 变成 loginMain.js，register.js 变成 registerMain.js,加入模块管理元素
 
+2017-04-28
+
+增加：checkInput.js 类增加了后台ajax验证方法
