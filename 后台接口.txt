@@ -1,0 +1,38 @@
+如果帐号、邮箱存在返回
+true：表示已存在
+false：表示不存在
+
+验证码如果通过：
+true：验证码通过
+false：不通过
+
+
+登陆页ajax 接口
+
+1）：验证码切换按钮点击时，发送一个请求给后台页
+   
+     发送请求信息的格式：{"change": "changeVtCode"}
+
+     接收后台返回信息格式：{"imgsrc":"图片路径"}imgsrc：返回图片路径
+
+
+
+注册页ajax 接口
+
+1）：账号输入框失焦时进行后台验证是否已有此账号的注册请求
+
+     发送请求信息的格式：{"accountVal":账号的内容}
+
+     接收后台信息的格式：{"accountIsExist":"exist/notExist"}exist：表示账号已被注册，notExist：表示账号未被注册
+
+2）：邮箱输入框失焦时进行后台验证是否已有此邮箱的注册请求
+
+     发送请求信息格式：{"mailVal": "this.value"}
+
+     接收后台信息的格式：{"mailIsExist": "exist/notExist"}exist：表示邮箱已经注册，notExist：表示邮箱未被注册
+
+3）：验证码输入框失焦时进行后台验证是否匹系统给出的验证码信息
+
+     发送请求信息的格式：{vtVal: this.value}
+   
+     接收后他信息的格式：{"vtBool": "true/false"}true：表示验证码正确，false：表示验证码错误
