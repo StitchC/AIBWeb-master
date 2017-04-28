@@ -22,7 +22,97 @@ require(["jquery.min","overborwserEvent"],function main($,EventUntil){
 			return document.querySelectorAll(name);
 		}
 	}
+
+	//封装选择多个dom元素 选择器
+	function ss(name){
+		return document.querySelectorAll(name);
+	}
+
+	//获取浏览器最终样式的函数
+	function getCurStyle(elem,pusedo,targetProperty){
+		if (elem.currentStyle != undefined) {
+			return elem.currentStyle[targetProperty];
+			
+		}else{
+			return window.getComputedStyle(elem,pusedo)[targetProperty];
+			
+		}
+	}
+
+	//一级导航点击事件执行函数
+	function firstNavClick(){
+		var text = this.innerText;
+		var elem = document.createElement("span");
+		var container = s("#bread-crumb-nav");
+		elem.innerText = text + " >";
+		//点击完一级导航栏之后先清空面包屑里面的内容
+		container.innerHTML = "";
+		container.appendChild(elem);
+	}
+
+	//二级导航点击事件执行函数
+	function secondNavClick(){
+		var text = this.innerText;
+		var elem = document.createElement("span");
+		var container = s("#bread-crumb-nav");
 	
+		elem.innerText = text;
+		//点击完二级导航栏之后先判断包裹层的第二个a 元素存不存在
+		//如果不存在就直接添加 存在就直接更改里面的文字
+
+		//不存在第二个a 标签
+		if (container.querySelectorAll("span")[1] == undefined) {
+			container.appendChild(elem);
+		}else{
+			//存在第二个a 标签
+			container.querySelectorAll("span")[1].innerText = text;
+		}
+	}
+
+	//定义导航标签点击事件 添加面包屑路径
+	function navTagClick(navlist){
+		//遍历所有导航集 添加点击事件
+		for (var i = 0; i < navlist.length; i++) {
+			if (navlist[i].className.indexOf("first-nav") != -1) {
+				EventUntil.addHandler(navlist[i],"click",firstNavClick);
+			}else if (navlist[i].className.indexOf("second-nav") != -1) {
+				EventUntil.addHandler(navlist[i],"click",secondNavClick);
+			}
+		}
+	}
+
+	//控制导航显示方法
+	function controlNavNums(navWrap,childnode,moreElemAdapter,icon){
+		//获取父元素的宽度
+		var parentWidth = parseInt(getCurStyle(navWrap,null,"width"));
+
+		//获取全部子元素的宽度
+		var childWidthTotal = 0;
+		for (var i = 0; i < childnode.length; i++) {
+
+			childWidthTotal += parseInt(getCurStyle(childnode[i],null,"width"));
+			if (childWidthTotal >= parentWidth) {
+				navWrap.removeChild(childnode[i]);
+			};
+		
+		};
+
+		console.log("子元素的总宽度：" + childWidthTotal);
+		console.log("父元素的宽度：" + parentWidth);
+		
+
+	}
+	controlNavNums(s("#head-nav-content"),ss(".first-nav"));
+
+	//面包屑导航点击事件调用函数
+	//...code
+	
+	//console.log(getCurStyle(ss(".first-nav")[3],null,"width"));
+
+
+	
+	//------------- 调用层 ----------------
+
 	//用户名栏鼠标移入事件
 	EventUntil.addHandler(s("#user-name"),"mouseover",function(event){
 		event = EventUntil.getEvent(event);
@@ -33,17 +123,17 @@ require(["jquery.min","overborwserEvent"],function main($,EventUntil){
 		floor.style.top = top;
 		floor.style.visibility = "visible";
 		
-	})
+	});
 
 	//用户操作下拉框鼠标移入事件
 	EventUntil.addHandler(s("#user-operate"),"mouseover",function(){
 		this.style.visibility = "visible";
-	})
+	});
 
 	//用户名栏鼠标移出事件
 	EventUntil.addHandler(s("#user-name"),"mouseout",function(){
 		s("#user-operate").style.visibility = "hidden";
-	})
+	});
 
 	//用户操作下拉框栏鼠标移出事件
 	EventUntil.addHandler(s("#user-operate"),"mouseout",function(){
@@ -51,20 +141,22 @@ require(["jquery.min","overborwserEvent"],function main($,EventUntil){
 		var relatedTarget = EventUntil.getRelatedTarget(event);
 		var tagName = relatedTarget.tagName.toLowerCase();
 		this.style.visibility = "hidden";
-	})
+	});
 
 	//发布信息按钮点击事件
 	EventUntil.addHandler(s("#release-msg"),"click",function(){
 		s("#release-msg-content").style.visibility = "visible";
-	})
+	});
 
 	//发布信息弹窗关闭按钮点击事件
 	EventUntil.addHandler(s("#close-btn"),"click",function(){
 		s("#release-msg-content").style.visibility = "hidden";
 	
-	})
+	});
 
-	
+	//一二级导航栏点击事件添加面包屑导航
+	navTagClick(ss(".first-nav"));
+	navTagClick(ss(".second-nav"));
 
 
 	

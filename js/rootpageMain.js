@@ -67,6 +67,7 @@ require(["jquery.min","checkInput","overborwserEvent"],function main($,checkInpu
 				//执行自定义的 getDetailInfo 方法
 				//获取到所有信息后再将所有信息填入弹出层对应的输入框中
 				if (this.className.indexOf("modify-tag") != -1) {
+					//获取点击按钮对应的信息
 					var infoList = getDetailInfo(this);
 					//获取弹出层
 					var floor = s("#floor");

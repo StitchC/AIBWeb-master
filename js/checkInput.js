@@ -58,7 +58,60 @@ define(["jquery.min"],function($){
 			}
 		},
 
-		ajax: function(){},
+		ajax: function(obj){
+			/*
+				{	
+					elem: //验证的元素,
+					hintsContent: //提示框元素,
+					errorColor: //错误时显示的颜色,
+					url: //后台处理页地址,
+					reqData: //发送过去的内容（以对象的形式保存）
+					correctBool: //返回数据的正确值值名
+					errorBool: //返回数据的错误值名
+					result: //返回的数据键名
+				}
+			*/
+			var that = this;
+			var bool;
+			var id = obj["elem"].id;
+			console.log(id);
+			obj["elem"].isCorrect = false;
+			var hintsContain = this.findHintsContain(obj["elem"],obj["hintsContent"]);
+			//整理为json 字符串
+			var formateData = JSON.stringify(obj["reqData"]);
+
+			//保存后台返回键的名
+			var resultCode = obj["result"]
+			
+			$.ajax({
+				url: obj["url"],
+				type: 'GET',
+				async: false,
+				dataType: 'json',
+				data: formateData,
+				success: function(data){
+					/*
+						返回的数据格式
+						{"result":"true/false"}
+					*/
+					//如果返回结果为false 则显示错误信息
+
+					if (data[resultCode] == obj["errorBool"]) {
+						hintsContain.innerText = that.hintsData[id]["ajaxError"];
+						hintsContain.style.color = obj["errorColor"];
+						hintsContain.style.visibility = 'visible';
+						obj["elem"].isCorrect = false;
+						bool = false;
+					}else{
+						obj["elem"].isCorrect = true;
+						bool = true;
+					}
+				}
+			});
+
+			return bool;
+			
+		},
 
 		sibling: function(elem,siblingId,hintsContent,correctColor,errorColor){
 			//获取当前元素的id 匹配提示内容的键
