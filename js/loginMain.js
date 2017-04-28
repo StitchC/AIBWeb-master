@@ -48,7 +48,6 @@ require(["jquery.min","cookies","overborwserEvent"],function main($,cookies,Even
 
 		if (account.value == "" || pwd.value == "") {
 			hint.innerText = "账号或密码不能为空";
-			hint.style.visibility = 'visible';
 			account.isCorrect = false;
 
 		}else if (account.value != "" && pwd.value != "") {
@@ -74,7 +73,6 @@ require(["jquery.min","cookies","overborwserEvent"],function main($,cookies,Even
 		//如果验证码为空提示错误信息
 		if (vtVal == "") {
 			vtHint.innerText = "验证码错误";
-			vtHint.style.visibility = 'visible';
 			vtCode.isCorrect = false;
 
 		}else{
