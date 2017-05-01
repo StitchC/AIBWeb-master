@@ -82,9 +82,10 @@ require(["jquery.min","overborwserEvent"],function main($,EventUntil){
 	}
 
 	//控制导航显示方法
-	function controlNavNums(navWrap,childnode,moreElemAdapter,icon){
+	function controlNavNums(navWrap,childnode,moreNavContain,icon){
 		//获取父元素的宽度
 		var parentWidth = parseInt(getCurStyle(navWrap,null,"width"));
+		var parentHeight = getCurStyle(navWrap,null,"height");
 
 		//获取全部子元素的宽度
 		var childWidthTotal = 0;
@@ -92,25 +93,50 @@ require(["jquery.min","overborwserEvent"],function main($,EventUntil){
 
 			childWidthTotal += parseInt(getCurStyle(childnode[i],null,"width"));
 			if (childWidthTotal >= parentWidth) {
-				navWrap.removeChild(childnode[i]);
+				
+				moreNavContain.appendChild(childnode[i]);
 			};
+
+			if (moreNavContain.childNodes.length != 0) {
+				icon.style.visibility = "visible";
+			}
 		
 		};
 
-		console.log("子元素的总宽度：" + childWidthTotal);
-		console.log("父元素的宽度：" + parentWidth);
+
+		EventUntil.addHandler(document,"click",function(event){
+			event = EventUntil.getEvent(event);
+			var target = EventUntil.getTarget(event);
+
+			if (target.id == "show-more-btn") {
+				if (moreNavContain.style.visibility == "visible") {
+
+					moreNavContain.style.visibility = "hidden";
+
+				}else{
+					moreNavContain.style.top = parentHeight;
+					moreNavContain.style.left = (target.offsetLeft - 215) + "px";
+					moreNavContain.style.visibility = "visible";
+				}
+			}else{
+				moreNavContain.style.visibility = "hidden";
+
+			}
+			
+		})
 		
 
 	}
-	controlNavNums(s("#head-nav-content"),ss(".first-nav"));
 
 	//面包屑导航点击事件调用函数
 	//...code
 	
-	//console.log(getCurStyle(ss(".first-nav")[3],null,"width"));
 
 
 	
+
+
+
 	//------------- 调用层 ----------------
 
 	//用户名栏鼠标移入事件
@@ -154,9 +180,13 @@ require(["jquery.min","overborwserEvent"],function main($,EventUntil){
 	
 	});
 
-	//一二级导航栏点击事件添加面包屑导航
+	//一二级导航栏点击事件添加面包屑导航调用方法
 	navTagClick(ss(".first-nav"));
 	navTagClick(ss(".second-nav"));
+
+	//导航栏数量限制输出以及查看隐藏导航栏按钮点击事件方法
+	controlNavNums(s("#head-nav-content"),ss(".first-nav"),
+		s("#nav-overflow-contain"),s("#show-more-btn"));
 
 
 	
