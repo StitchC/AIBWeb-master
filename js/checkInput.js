@@ -39,7 +39,28 @@ define(["jquery.min"],function($){
 			hintsContain.style.visibility = 'visible';
 		},
 
-		reg: function(elem,hintsContent,correctColor,errorColor){
+		regWithLimit: function(elem,hintsContent,correctColor,errorColor){
+			//获取当前元素的id 匹配提示内容的键
+			var id = elem.id;
+			elem.isCorrect = false;
+			var hintsContain = this.findHintsContain(elem,hintsContent);
+
+			if (this.hintsData[id]["reg"].test(elem.value) && elem.value.length >= this.hintsData[id]["minLen"] 
+				&& elem.value.length <= this.hintsData[id]["maxLen"]) {
+				hintsContain.innerText = this.hintsData[id]["correct"];
+				hintsContain.style.color = correctColor;
+				hintsContain.style.visibility = 'visible';
+				elem.isCorrect = true;
+			}else{
+				hintsContain.innerText = this.hintsData[id]["error"];
+				hintsContain.style.color = errorColor;
+				hintsContain.style.visibility = 'visible';
+				elem.isCorrect = false;
+			}
+			console.log("当前失焦元素：" + elem.id + "内容长度为：" + elem.value.length);
+		},
+
+		regWithoutLimit: function(elem,hintsContent,correctColor,errorColor){
 			//获取当前元素的id 匹配提示内容的键
 			var id = elem.id;
 			elem.isCorrect = false;
@@ -56,6 +77,7 @@ define(["jquery.min"],function($){
 				hintsContain.style.visibility = 'visible';
 				elem.isCorrect = false;
 			}
+			console.log("当前失焦元素：" + elem.id + "内容长度为：" + elem.value.length);
 		},
 
 		ajax: function(obj){
